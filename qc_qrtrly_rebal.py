@@ -10,7 +10,7 @@ class VerticalTachyonRegulators(QCAlgorithm):
        self.first = self.AddEquity("SPXL",Resolution.Daily)
        self.second = self.AddEquity("TMF",Resolution.Daily)
        # Universe selection
-       tickers = ["TMF", "SPXL"]
+       tickers = ["TMF", "TQQQ"]
        symbols = [ Symbol.Create(ticker, SecurityType.Equity, Market.USA) for ticker in tickers]
        self.AddUniverseSelection(ManualUniverseSelectionModel(symbols))
        self.SetUniverseSelection(ManualUniverseSelectionModel(symbols))
